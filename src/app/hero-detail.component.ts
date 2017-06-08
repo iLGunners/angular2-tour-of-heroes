@@ -23,13 +23,13 @@ import { HeroService } from './hero.service';
   `
 })
 export class HeroDetailComponent implements OnInit {
-    constructor(
-        private heroService: HeroService,
-        private route: ActivatedRoute,
-        private location: Location
-    ) {}
+  constructor(
+    private heroService: HeroService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) {}
 
-    @Input() hero: Hero;
-    
-    ngOnInit(): void {}
+  @Input() hero: Hero;
+
+  ngOnInit(): void {}
 }
