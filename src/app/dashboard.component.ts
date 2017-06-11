@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
 import { Logger } from './logger.service'
+import { lg } from './app.module'
 
 @Component({
   selector: 'my-dashboard',

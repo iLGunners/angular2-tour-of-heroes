@@ -46,3 +46,9 @@ import { Logger } from './logger.service';
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
+
+// simple func that logs
+export function lg(msg: any) {
+  console.log(msg);
+}
+

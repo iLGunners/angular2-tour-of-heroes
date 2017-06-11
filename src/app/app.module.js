@@ -55,4 +55,8 @@ AppModule = __decorate([
     })
 ], AppModule);
 exports.AppModule = AppModule;
+function lg(msg) {
+    console.log(msg);
+}
+exports.lg = lg;
 //# sourceMappingURL=app.module.js.map
