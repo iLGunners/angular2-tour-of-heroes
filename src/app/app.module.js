@@ -20,6 +20,7 @@ var hero_detail_component_1 = require("./hero-detail.component");
 var hero_search_component_1 = require("./hero-search.component");
 var hero_service_1 = require("./hero.service");
 var hero_search_service_1 = require("./hero-search.service");
+var logger_service_1 = require("./logger.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,6 +28,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
+        // other modules whose exported classes are needed by component templates
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
@@ -34,6 +36,7 @@ AppModule = __decorate([
             angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
             app_routing_module_1.AppRoutingModule
         ],
+        // the view classes that belong to this module
         declarations: [
             app_component_1.AppComponent,
             dashboard_component_1.DashboardComponent,
@@ -41,10 +44,13 @@ AppModule = __decorate([
             hero_detail_component_1.HeroDetailComponent,
             hero_search_component_1.HeroSearchComponent
         ],
+        //  services; they become accessible in all parts of the app
         providers: [
+            logger_service_1.Logger,
             hero_service_1.HeroService,
             hero_search_service_1.HeroSearchService
         ],
+        // the main application view, called the root component, that hosts all other app views
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var hero_service_1 = require("./hero.service");
+var logger_service_1 = require("./logger.service");
 var DashboardComponent = (function () {
-    function DashboardComponent(heroService) {
+    function DashboardComponent(heroService, logger) {
         this.heroService = heroService;
+        this.logger = logger;
         this.heroes = [];
     }
     DashboardComponent.prototype.ngOnInit = function () {
@@ -30,7 +32,8 @@ DashboardComponent = __decorate([
         templateUrl: './dashboard.component.html',
         styleUrls: ['./dashboard.component.css']
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
+    __metadata("design:paramtypes", [hero_service_1.HeroService,
+        logger_service_1.Logger])
 ], DashboardComponent);
 exports.DashboardComponent = DashboardComponent;
 //# sourceMappingURL=dashboard.component.js.map
