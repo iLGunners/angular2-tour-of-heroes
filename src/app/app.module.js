@@ -55,6 +55,7 @@ AppModule = __decorate([
     })
 ], AppModule);
 exports.AppModule = AppModule;
+// simple func that logs
 function lg(msg) {
     console.log(msg);
 }
